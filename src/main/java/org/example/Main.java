@@ -1,5 +1,7 @@
 package org.example;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.Scanner; // necessary for reading input and output
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -52,6 +54,7 @@ public class Main {
             System.out.println("Your payout is: $" + payout);
         }
 
+
         System.out.println("Please enter the amount of miles being claimed for reimbursement: ");
         double milesDriven = in.nextDouble();
         System.out.println("Please enter the mileage rate in decimal form: ");
@@ -60,7 +63,8 @@ public class Main {
         double mileageReimbursement = milesDriven * rate;
 
         System.out.println("Your reimbursement is: $" + mileageReimbursement);
-        System.out.println("Your reimbursement rounded to whole dollars is: $" + (int) mileageReimbursement);
+
+        System.out.println("Your reimbursement rounded to the nearest whole dollar is: $" + (int)(mileageReimbursement + 0.5));
 
         System.out.println(7 / 2);
         System.out.println(7 / 2.0);
